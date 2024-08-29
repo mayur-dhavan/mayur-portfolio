@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import linkedin from '../assets/img/nav-icon1.svg';
+import facebook from '../assets/img/nav-icon2.svg';
+import instagram from '../assets/img/nav-icon3.svg';
+import github from "../assets/img/github.svg";
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -50,9 +51,10 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/mayur-dhavan-50902922b/"><img src={navIcon1} alt="LinkedIn" /></a>
-                <a href="https://www.facebook.com/mayur.dhavan.127/"><img src={navIcon2} alt="Facebook" /></a>
-                <a href="https://www.instagram.com/mayur_dhavan_/"><img src={navIcon3} alt="Instagram" /></a>
+                <a href="https://www.linkedin.com/in/mayur-dhavan-50902922b/"><img src={linkedin} alt="LinkedIn" /></a>
+                <a href="https://www.facebook.com/mayur.dhavan.127/"><img src={facebook} alt="Facebook" /></a>
+                <a href="https://www.instagram.com/mayur_dhavan_"><img src={instagram} alt="Instagram" /></a>
+                <a href="https://github.com/mayur-dhavan"><img src={github} alt="GitHub" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

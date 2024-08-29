@@ -17,10 +17,10 @@ export const Contact = () => {
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
+    setFormDetails({
+      ...formDetails,
+      [category]: value
+    })
   }
 
   const handleSubmit = async (e) => {
@@ -80,7 +80,6 @@ export const Contact = () => {
                   name="contact" 
                   method="POST" 
                   data-netlify="true" 
-                  onSubmit={handleSubmit}
                 >
                   <Row>
                     <Col size={12} sm={6} className="px-1">
