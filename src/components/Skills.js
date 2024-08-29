@@ -38,27 +38,39 @@ export const Skills = () => {
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="Web Develpement" />
                                 <h5>Web Development</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <img src={meter3} alt="Shopify" />
+                                <h5>Shopify</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <img src={meter3} alt="Wordpress" />
+                                <h5>Wordpress</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <img src={meter1} alt="Landing Page" />
+                                <h5>Landing Page</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter2} alt="Web Designing" />
+                                <h5>Web Designing</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter3} alt="html/css" />
+                                <h5>HTML/CSS/Javascript</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter2} alt="reactJs" />
+                                <h5>ReactJs</h5>
                             </div>
                         </Carousel>
                     </div>
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
   )
 }

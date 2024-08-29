@@ -1,8 +1,10 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import healthyDart from "../assets/img/HealthyDart.png";
+import DA from "../assets/img/DA.png";
+import LSB from "../assets/img/LSB.png";
+import Hardr from "../assets/img/Hardr.png";
 import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,6 +13,26 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Less Sucky Business",
+      description: "Shopify Store Development",
+      imgUrl: LSB,
+    },
+    {
+      title: "Hardr Shilajit",
+      description: "Shopify Store Development",
+      imgUrl: Hardr,
+    },
+    {
+      title: "DA Analyzer",
+      description: "Web Developement",
+      imgUrl: DA,
+    },
+    {
+      title: "The Healthy Dart",
+      description: "Wordpress Development",
+      imgUrl: healthyDart,
+    },
+    {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
@@ -18,27 +40,7 @@ export const Projects = () => {
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
       imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
     },
   ];
 
