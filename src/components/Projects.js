@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import healthyDart from "../assets/img/HealthyDart.png";
 import DA from "../assets/img/DA.png";
-import LSB from "../assets/img/LSB.png";
+import LSB from "../assets/img/lsb2.png";
 import Hardr from "../assets/img/Hardr.png";
 import projImg1 from "../assets/img/project-img1.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
