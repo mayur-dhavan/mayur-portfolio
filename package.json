@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "framer-motion": "^11.3.31",
+    "gsap": "^3.12.5",
     "nodemailer": "^6.9.14",
     "postcss": "^8.4.41",
     "react": "^18.1.0",
