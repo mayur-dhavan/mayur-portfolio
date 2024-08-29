@@ -1,3 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -615,4 +621,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+
+/* Css for educations file */
+/* src/components/Education.css */
+.education {
+  padding: 60px 0;
+  background-color: #121212; /* Match background color of other sections */
+  color: #fff;
+}
+
+.education h2 {
+  font-size: 2.5rem; /* Adjusted font size to match other section titles */
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #1c1c1c; /* Match background color to fit the dark theme */
+  border: 1px solid #444; /* Add subtle border */
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #f8f9fa;
+}
+
+.card-subtitle {
+  font-size: 1.1rem;
+  color: #adb5bd;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #dee2e6;
+}
+
+/* Animation styling using animate.css */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
 }

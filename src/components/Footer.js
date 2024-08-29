@@ -18,10 +18,10 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/mayur-dhavan-50902922b/"><img src={linkedin} alt="LinkedIn" /></a>
-              <a href="https://www.facebook.com/mayur.dhavan.127/"><img src={facebook} alt="Facebook" /></a>
-              <a href="https://www.instagram.com/mayur_dhavan_/"><img src={instagram} alt="Instagram" /></a>
-               <a href="https://github.com/mayur-dhavan"><img src={github} alt="GitHub" /></a>
+              <a href="https://www.linkedin.com/in/mayur-dhavan-50902922b/" target="blank"><img src={linkedin} alt="LinkedIn" /></a>
+              <a href="https://www.facebook.com/mayur.dhavan.127/" target="blank"><img src={facebook} alt="Facebook" /></a>
+              <a href="https://www.instagram.com/mayur_dhavan_/" target="blank"><img src={instagram} alt="Instagram" /></a>
+               <a href="https://github.com/mayur-dhavan" target="blank"><img src={github} alt="GitHub" /></a>
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>

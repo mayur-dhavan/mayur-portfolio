@@ -1,52 +1,53 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
 
-// server used to send send emails
 const app = express();
+const port = 5000;
+
 app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: "********@gmail.com",
-    pass: ""
-  },
-});
+// Create a route to handle form submissions
+app.post('/', (req, res) => {
+  const { firstName, lastName, email, phone, message } = req.body;
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
-
-router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
-  const mail = {
-    from: name,
-    to: "********@gmail.com",
-    subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
+  // Configure the email transport
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'mayurdhavan2244@gmail.com', // Your email address
+      pass: 'xyic gomi qdbw mvrf'   // Your email password
     }
   });
+
+  // Email options
+  const mailOptions = {
+    from: email,
+    to: 'mayurdhavan2244@gmail.com', 
+    subject: 'Contact Form Submission',
+    text: `
+      Name: ${firstName} ${lastName}
+      Email: ${email}
+      Phone: ${phone}
+      Message: ${message}
+    `
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      res.status(500).json({ result: 'error', message: 'Failed to send message.' });
+    } else {
+      console.log('Email sent:', info.response);
+      res.status(200).json({ result: 'success', message: 'Message sent successfully.' });
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });

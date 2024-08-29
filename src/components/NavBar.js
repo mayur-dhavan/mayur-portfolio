@@ -48,13 +48,14 @@ export const NavBar = () => {
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#education" className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')}>Education</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/mayur-dhavan-50902922b/"><img src={linkedin} alt="LinkedIn" /></a>
-                <a href="https://www.facebook.com/mayur.dhavan.127/"><img src={facebook} alt="Facebook" /></a>
-                <a href="https://www.instagram.com/mayur_dhavan_"><img src={instagram} alt="Instagram" /></a>
-                <a href="https://github.com/mayur-dhavan"><img src={github} alt="GitHub" /></a>
+                <a href="https://www.linkedin.com/in/mayur-dhavan-50902922b/" target="blank"><img src={linkedin} alt="LinkedIn" /></a>
+                <a href="https://www.facebook.com/mayur.dhavan.127/" target="blank"><img src={facebook} alt="Facebook" /></a>
+                <a href="https://www.instagram.com/mayur_dhavan_" target="blank"><img src={instagram} alt="Instagram" /></a>
+                <a href="https://github.com/mayur-dhavan" target="blank"><img src={github} alt="GitHub" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
