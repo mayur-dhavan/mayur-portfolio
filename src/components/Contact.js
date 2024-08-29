@@ -24,8 +24,10 @@ export const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
+  e.preventDefault();
+  setButtonText("Sending...");
+  
+  try {
     const response = await fetch("/", {
       method: "POST",
       headers: {
@@ -34,7 +36,10 @@ export const Contact = () => {
       body: JSON.stringify(formDetails),
     });
 
-    setButtonText("Send");
+    // Check if response is okay (status code 200-299)
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
     const result = await response.json();
     setFormDetails(formInitialDetails);
 
@@ -43,7 +48,13 @@ export const Contact = () => {
     } else {
       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
     }
-  };
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+    setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+  } finally {
+    setButtonText("Send");
+  }
+};
 
   return (
     <section className="contact" id="connect">
