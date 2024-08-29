@@ -72,12 +72,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Get In Touch</h2>
-                <form 
-                  name="contact" 
-                  method="POST" 
-                  data-netlify="true" 
-                  onSubmit={handleSubmit}
-                >
+                <form name="contact" method="POST" netlify onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" name="firstName" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
