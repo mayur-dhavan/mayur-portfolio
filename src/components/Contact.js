@@ -17,44 +17,11 @@ export const Contact = () => {
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
+    setFormDetails({
+      ...formDetails,
+      [category]: value
+    })
   }
-
-  const handleSubmit = async (e) => {
-  e.preventDefault();
-  setButtonText("Sending...");
-  
-  try {
-    const response = await fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formDetails),
-    });
-
-    // Check if response is okay (status code 200-299)
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const result = await response.json();
-    setFormDetails(formInitialDetails);
-
-    if (result.result === 'success') {
-      setStatus({ success: true, message: 'Message sent successfully' });
-    } else {
-      setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-    }
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-    setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-  } finally {
-    setButtonText("Send");
-  }
-};
 
   return (
     <section className="contact" id="connect">
@@ -72,7 +39,11 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Get In Touch</h2>
-                <form name="contact" method="POST" netlify onSubmit={handleSubmit}>
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                >
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" name="firstName" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
