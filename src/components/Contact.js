@@ -26,24 +26,39 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    const response = await fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formDetails),
-    });
-
-    setButtonText("Send");
-    const result = await response.json();
-    setFormDetails(formInitialDetails);
-
-    if (result.result === 'success') {
-      setStatus({ success: true, message: 'Message sent successfully' });
-    } else {
+    
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDetails),
+      });
+  
+      // Check if response is okay (status code 200-299)
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      // Try to parse JSON response
+      const result = await response.json();
+      setFormDetails(formInitialDetails);
+  
+      if (result.result === 'success') {
+        setStatus({ success: true, message: 'Message sent successfully' });
+      } else {
+        setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+      }
+    } catch (error) {
+      // Handle errors
+      console.error('There was a problem with the fetch operation:', error);
       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+    } finally {
+      setButtonText("Send");
     }
   };
+  
 
   return (
     <section className="contact" id="connect">
