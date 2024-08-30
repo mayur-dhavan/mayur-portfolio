@@ -30,39 +30,39 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Top Highlights</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Web Develpement" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Shopify" />
-                                <h5>Shopify</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="reactJs" />
-                                <h5>ReactJs</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Wordpress" />
-                                <h5>Wordpress</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Web Designing" />
-                                <h5>Web Designing</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Top Highlights</h2>
+              <p>Explore the key areas where I excel and have made significant contributions. From developing dynamic web applications to designing stunning user interfaces, here are the highlights of my technical skill set.</p>
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                <div className="item">
+                  <img src={meter1} alt="Web Develpement" />
+                  <h5>Web Development</h5>
                 </div>
+                <div className="item">
+                  <img src={meter3} alt="Shopify" />
+                  <h5>Shopify</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="reactJs" />
+                  <h5>ReactJs</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="Wordpress" />
+                  <h5>Wordpress</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="Web Designing" />
+                  <h5>Web Designing</h5>
+                </div>
+              </Carousel>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Background" />
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
   )
 }
