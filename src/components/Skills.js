@@ -34,7 +34,7 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
+                        <h2>Top Highlights</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
@@ -46,24 +46,16 @@ export const Skills = () => {
                                 <h5>Shopify</h5>
                             </div>
                             <div className="item">
+                                <img src={meter2} alt="reactJs" />
+                                <h5>ReactJs</h5>
+                            </div>
+                            <div className="item">
                                 <img src={meter3} alt="Wordpress" />
                                 <h5>Wordpress</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Landing Page" />
-                                <h5>Landing Page</h5>
-                            </div>
-                            <div className="item">
                                 <img src={meter2} alt="Web Designing" />
                                 <h5>Web Designing</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="html/css" />
-                                <h5>HTML/CSS/Javascript</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="reactJs" />
-                                <h5>ReactJs</h5>
                             </div>
                         </Carousel>
                     </div>

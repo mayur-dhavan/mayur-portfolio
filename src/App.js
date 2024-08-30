@@ -9,13 +9,13 @@ import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-
+import { AboutSection } from "./components/AboutSection";
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Banner />
-      {/* <About /> */}
+      <AboutSection />
       <Skills />
       <Education />
       <Projects />
