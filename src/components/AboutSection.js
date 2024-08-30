@@ -12,6 +12,11 @@ export function AboutSection() {
   const imgRef = useRef(null);
   const textRef = useRef(null);
   const imgContainerRef = useRef(null);
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+  
 
   const [tab, setTab] = useState('skills');
 
@@ -70,25 +75,18 @@ export function AboutSection() {
           About Me
         </motion.h2>
         <div className="flex flex-col md:flex-row items-center justify-between relative z-10">
-          <div
-            className="md:w-1/3 text-center mb-8 md:mb-0"
-            ref={imgContainerRef}
+          <motion.div
+            className="md:w-1/3 text-center mb-8 md:mb-0 glow-effect"
+            variants={cardVariants}
           >
-            <div
-              className="relative rounded-full w-48 h-48 mx-auto mb-4 shadow-lg hover:shadow-2xl transform transition-transform duration-700 hover:scale-110 hover:rotate-6 overflow-hidden"
-              ref={imgRef}
-            >
-              <img
-                src={profile}
-                alt="Mayur Dhavan"
-                className="w-full h-full object-cover"
-                loading="eager" // Ensures the image is loaded quickly
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-0 hover:opacity-60 transition-opacity duration-500"></div>
-            </div>
+            <img
+              src={profile}
+              alt="Your Avatar"
+              className="rounded-full w-48 h-48 mx-auto mb-4"
+            />
             <h3 className="text-2xl font-semibold">Mayur Dhavan</h3>
-            <p className="text-lg text-gray-400">Web Developer Associate at Radon Media</p>
-          </div>
+            <p className="text-lg">Web Developer Associate at Radon Media</p>
+          </motion.div>
           <div
             className="md:w-2/3"
             ref={textRef}
@@ -97,7 +95,7 @@ export function AboutSection() {
             <p className="text-lg mb-6 text-gray-300">
               I'm a passionate web developer with experience in creating responsive and user-friendly websites using HTML, CSS, JavaScript, and popular frameworks like React and Bootstrap. With a strong foundation in C/C++ and Python, I’m committed to delivering high-quality web solutions that meet client needs and industry standards.
             </p>
-            <h3 className="text-2xl font-semibold mb-4">My Skills</h3>
+            <h3 className="text-2xl font-semibold mb-4">More About Me</h3>
             <TabSection tab={tab} setTab={setTab} />
           </div>
         </div>
