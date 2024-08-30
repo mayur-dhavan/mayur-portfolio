@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://mayur-portfolio-1.netlify.app/sitemap.xml
