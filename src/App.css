@@ -1,9 +1,4 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
