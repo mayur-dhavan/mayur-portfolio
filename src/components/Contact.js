@@ -28,23 +28,22 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch('http://localhost:5000/', {
+      const response = await fetch('https://formspree.io/f/mqaznjkv', {  
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formDetails),
       });
-    
+
       if (!response.ok) {
-        console.error('Response:', response);
         throw new Error('Network response was not ok');
       }
-    
+
       const result = await response.json();
       setFormDetails(formInitialDetails);
-    
-      if (result.result === 'success') {
+
+      if (result.ok) {
         setStatus({ success: true, message: 'Message sent successfully' });
       } else {
         setStatus({ success: false, message: 'Something went wrong, please try again later.' });
@@ -55,10 +54,8 @@ export const Contact = () => {
     } finally {
       setButtonText("Send");
     }
-    
+
   };
-
-
 
   return (
     <section className="contact" id="connect">
@@ -76,7 +73,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Get In Touch</h2>
-                  <form name="contact" method="POST">
+                  <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input type="text" name="firstName" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
@@ -103,7 +100,7 @@ export const Contact = () => {
                     </Row>
                   </form>
                 </div>
-                }
+              }
             </TrackVisibility>
           </Col>
         </Row>
