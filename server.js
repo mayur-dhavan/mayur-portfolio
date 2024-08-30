@@ -1,53 +1,39 @@
+// server.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
+const { check, validationResult } = require('express-validator');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
-app.use(cors());
+// Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Create a route to handle form submissions
-app.post('/', (req, res) => {
+// Route to handle form submission
+app.post('/submit', [
+  check('firstName').not().isEmpty().withMessage('First name is required'),
+  check('lastName').not().isEmpty().withMessage('Last name is required'),
+  check('email').isEmail().withMessage('Valid email is required'),
+  check('phone').optional().isLength({ min: 10, max: 10 }).withMessage('Phone number must be 10 digits'),
+  check('message').not().isEmpty().withMessage('Message is required'),
+], (req, res) => {
+  // Validate data
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  // Data is valid; process the request
   const { firstName, lastName, email, phone, message } = req.body;
 
-  // Configure the email transport
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'mayurdhavan2244@gmail.com', // Your email address
-      pass: 'xyic gomi qdbw mvrf'   // Your email password
-    }
-  });
+  // Here, you can add code to save the data to a database or send an email
 
-  // Email options
-  const mailOptions = {
-    from: email,
-    to: 'mayurdhavan2244@gmail.com', 
-    subject: 'Contact Form Submission',
-    text: `
-      Name: ${firstName} ${lastName}
-      Email: ${email}
-      Phone: ${phone}
-      Message: ${message}
-    `
-  };
-
-  // Send the email
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ result: 'error', message: 'Failed to send message.' });
-    } else {
-      console.log('Email sent:', info.response);
-      res.status(200).json({ result: 'success', message: 'Message sent successfully.' });
-    }
-  });
+  res.status(200).json({ result: 'success', message: 'Message sent successfully' });
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });

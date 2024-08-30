@@ -691,6 +691,25 @@ span.navbar-text {
 .contact form button:hover::before {
   width: 100%;
 }
+input.error, textarea.error {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.success {
+  color: green;
+  font-size: 1rem;
+}
+
+.danger {
+  color: red;
+  font-size: 1rem;
+}
+
 
 /************ Footer Css ************/
 .footer {
