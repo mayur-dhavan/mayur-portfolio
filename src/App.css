@@ -166,6 +166,7 @@ span.navbar-text {
   z-index: 1;
 }
 .navbar-text button::before {
+  border-radius: 50px;
   content: "";
   width: 0%;
   height: 100%;

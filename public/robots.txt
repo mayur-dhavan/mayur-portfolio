@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mayur-portfolio-1.netlify.app/sitemap.xml
+Sitemap: https://mayur-dhavan.web.app/sitemap.xml

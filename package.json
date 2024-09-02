@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "express-validator": "^7.2.0",
+    "firebase": "^10.13.1",
     "framer-motion": "^11.3.31",
     "gsap": "^3.12.5",
     "nodemailer": "^6.9.14",
