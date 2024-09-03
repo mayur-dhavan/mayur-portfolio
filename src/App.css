@@ -803,6 +803,48 @@ input.error, textarea.error {
   margin-top: 20px;
 }
 
+.footer {
+  position: relative;
+  background-color: #f8f9fa; /* Light background for the footer */
+  padding: 40px 0;
+  border-top: 1px solid #dee2e6;
+}
+.back-to-top {
+  z-index: 9999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+.back-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+.back-to-top img {
+  width: 100%;
+}
+.footer-logo img{
+cursor: pointer;
+}
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
 
 /* Css for educations file */
 /* src/components/Education.css */
