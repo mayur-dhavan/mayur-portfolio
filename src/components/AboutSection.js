@@ -84,7 +84,7 @@ export function AboutSection() {
               alt="Your Avatar"
               className="rounded-full w-48 h-48 mx-auto mb-4"
             />
-            <h3 className="text-2xl font-semibold">Mayur Dhavan</h3>
+            <h2 className="text-2xl font-semibold">Mayur Dhavan</h2>
             <p className="text-lg">Web Developer Associate at Radon Media</p>
           </motion.div>
           <div
