@@ -939,9 +939,9 @@ cursor: pointer;
 .tab-section .nav.nav-pills .nav-link.active::before {
     width: 100% !important;
 }
-.tab-section .nav.nav-pills .nav-link.active {
+/* .tab-section .nav.nav-pills .nav-link.active {
     border: 1px solid rgba(255, 255, 255, 1);
-}
+} */
 
 .glow-effect {
   position: relative;
