@@ -21,10 +21,10 @@ export const TabSection = ({ tab, setTab }) => {
               <Tab.Pane eventKey="skills">
                 <ul className="list-disc list-inside space-y-2 text-lg text-white">
                   <li>HTML, CSS, JavaScript</li>
-                  <li>React, Bootstrap, Framer Motion</li>
-                  <li>WordPress (Elementor, Divi)</li>
+                  <li>React, Bootstrap, Framer Motion, GSAP</li>
+                  <li>WordPress (Elementor, Divi), PHP</li>
                   <li>On-page SEO Strategies</li>
-                  <li>Shopify Development</li>
+                  <li>Shopify Development, Liquid Code</li>
                   <li>C/C++, Python</li>
                   <li>Blockchain Fundamentals</li>
                 </ul>
