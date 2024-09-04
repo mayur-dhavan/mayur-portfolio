@@ -944,7 +944,7 @@ cursor: pointer;
 } */
 
 .nav-link.active {
-  cursor: not-allowed;
+  cursor: auto;
 }
 .glow-effect {
   position: relative;
