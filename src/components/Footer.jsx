@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { MailchimpForm } from "./MailchimpForm";
+// import { MailchimpForm } from "./MailchimpForm";
 import logo from "../assets/img/logo.svg";
 import linkedin from "../assets/img/nav-icon1.svg";
 import facebook from "../assets/img/nav-icon2.svg";
@@ -32,7 +32,7 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <MailchimpForm />
+          {/* <MailchimpForm /> */}
           <Col className="footer-logo" size={12} sm={6}>
            <img onClick={scrollToTop} src={logo} alt="Mayur Portfolio Logo" />
           </Col>
