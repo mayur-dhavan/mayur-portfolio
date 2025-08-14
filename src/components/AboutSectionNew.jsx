@@ -152,7 +152,7 @@ export function AboutSection() {
                     <h3 className="section-subtitle">Professional Experience</h3>
                     <div className="experience-timeline">
                       {experience.map((exp, index) => (
-                        <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                        <div key={index} className="timeline-item">
                           <div className="timeline-marker"></div>
                           <div className="timeline-content">
                             <h4 className="timeline-title">{exp.title}</h4>

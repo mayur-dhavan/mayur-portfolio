@@ -9,18 +9,26 @@ import { Education } from "./components/Education";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AboutSection } from "./components/AboutSection";
+import FluidWebGLBackground from "./components/FluidWebGLBackground.tsx";
+import SimpleFluidBackground from "./components/SimpleFluidBackground.jsx";
+import SimpleWebGLTest from "./components/SimpleWebGLTest.jsx";
+import GalaxyBackground from "./components/GalaxyBackground.jsx";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Banner />
-      <AboutSection />
-      <Skills />
-      <Education />
-      <Projects />
-      <Contact />
-      <Footer />
+      <GalaxyBackground />
+      <FluidWebGLBackground />
+      <div className="app-content">
+        <NavBar />
+        <Banner />
+        <AboutSection />
+        <Skills />
+        <Education />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

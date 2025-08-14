@@ -5,6 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import resume from '../assets/MayurResumeNew.pdf'; 
+import ResumePreviewModal from './ResumePreviewModal';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,7 +13,8 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const [showModal, setShowModal] = useState(false);
+  const toRotate = ["Web Developer", "Full Stack Engineer", "eCommerce Developer"];
   const period = 900;
 
   useEffect(() => {
@@ -48,6 +50,9 @@ export const Banner = () => {
     }
   }
 
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -58,12 +63,12 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <button
                     className="tagline"
-                    onClick={() => window.open(resume)} 
+                    onClick={handleShowModal} 
                   >
                     Download My Resume
                   </button>
-                  <h1>{`Hi! My Name Is Mayur Dhavan, I'm a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I specialize in crafting responsive, user-friendly websites that not only look great but also perform seamlessly across devices. My expertise lies in using WordPress and Shopify to build and customize websites tailored to your business needs. Whether you're looking to create a custom WordPress site, launch a Shopify store, or enhance your online presence, I combine clean code, modern design, and a focus on user experience to bring your vision to life.</p>
+                  <h1>{`Hi! My Name Is Mayur Dhavan, I'm a`} <span className="txt-rotate" data-period="1000" data-rotate='[ "Web Developer", "Full Stack Engineer", "eCommerce Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>As a Web Developer and Full Stack Engineer, I specialize in building clean code, thoughtful design, and real-world solutions. With a passion for scalable SaaS and eCommerce applications, I leverage my expertise in modern technologies to create impactful and user-centric digital experiences. I am always learning and open to new challenges in the ever-evolving tech landscape.</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
             </TrackVisibility>
@@ -78,6 +83,7 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
+      <ResumePreviewModal show={showModal} handleClose={handleCloseModal} />
     </section>
   )
 }
