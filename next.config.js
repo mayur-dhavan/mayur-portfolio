@@ -6,7 +6,8 @@ const nextConfig = {
     domains: ['cdn.jsdelivr.net', 'raw.githubusercontent.com']
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  trailingSlash: true,
+  // Disable trailing slash to ensure correct routing on Netlify
+  trailingSlash: false,
   distDir: '.next',
   experimental: {
     forceSwcTransforms: true,
