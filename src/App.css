@@ -265,8 +265,23 @@ nav.navbar.scrolled {
 }
 
 nav.navbar a.navbar-brand img {
-  width: 120px;
-  transition: transform 0.3s ease-in-out;
+  width: 170px;
+  height: auto;
+  max-height: 50px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  border-radius: 8px;
+  filter: brightness(1.15) contrast(1.1) drop-shadow(0 0 16px #00c3ff) drop-shadow(0 0 32px #ff6ec4);
+}
+@media (max-width: 768px) {
+  nav.navbar a.navbar-brand img {
+    width: 120px;
+    max-height: 40px;
+  }
+}
+
+nav.navbar a.navbar-brand img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.25) contrast(1.2) drop-shadow(0 0 24px #00c3ff) drop-shadow(0 0 48px #ff6ec4);
 }
 
 nav.navbar.scrolled a.navbar-brand img {

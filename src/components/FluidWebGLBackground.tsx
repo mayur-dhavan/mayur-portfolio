@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 const FluidWebGLBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number>(0);
   const glRef = useRef<WebGLRenderingContext | WebGL2RenderingContext | null>(null);
   const pointersRef = useRef<any[]>([]);
   const splatStackRef = useRef<number[]>([]);

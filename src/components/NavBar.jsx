@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/main-logo.png';
 import linkedin from '../assets/img/nav-icon1.svg';
 import facebook from '../assets/img/nav-icon2.svg';
 import instagram from '../assets/img/nav-icon3.svg';
@@ -37,8 +36,32 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
-            <img src={logo} alt="Portfolio Logo" />
+          <Navbar.Brand href="/" style={{ display: 'flex', alignItems: 'center' }}>
+            <img 
+              src="/mayur-logo.png" 
+              alt="Mayur Portfolio Logo" 
+              style={{ 
+                width: '120px', 
+                height: 'auto',
+                maxHeight: '50px',
+                objectFit: 'contain'
+              }}
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span 
+              style={{ 
+                display: 'none',
+                color: '#fff',
+                fontSize: '24px',
+                fontWeight: 'bold',
+                letterSpacing: '1px'
+              }}
+            >
+              MAYUR
+            </span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>

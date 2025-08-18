@@ -1,0 +1,36 @@
+{
+  "name": "mayur-portfolio-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.0",
+    "react-bootstrap": "^2.9.0",
+    "react-bootstrap-icons": "^1.10.3",
+    "framer-motion": "^11.3.31",
+    "gsap": "^3.12.5",
+    "react-multi-carousel": "^2.8.4",
+    "react-on-screen": "^2.1.1",
+    "nodemailer": "^6.9.14",
+    "cors": "^2.8.5",
+    "express-validator": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "typescript": "^5.0.0"
+  }
+}

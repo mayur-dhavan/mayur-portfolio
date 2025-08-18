@@ -47,6 +47,7 @@ export const Contact = () => {
     }
 
     setButtonText("Sending...");
+    setErrors({});
 
     try {
       const response = await fetch('https://formspree.io/f/mqaznjkv', {
@@ -64,8 +65,8 @@ export const Contact = () => {
       const result = await response.json();
       setFormDetails(formInitialDetails);
 
-      if (result.ok) {
-        setStatus({ success: true, message: 'Message sent successfully' });
+      if (result.ok || response.ok) {
+        setStatus({ success: true, message: 'Message sent successfully!' });
       } else {
         setStatus({ success: false, message: 'Something went wrong, please try again later.' });
       }
@@ -164,3 +165,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;
