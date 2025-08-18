@@ -11,58 +11,16 @@
       "static/chunks/_pages-dir-browser_node_modules_next_dist_pages__error_js.js"
     ]
   },
-  "pages\\index.tsx -> ../src/components/AboutSection": {
-    "id": "pages\\index.tsx -> ../src/components/AboutSection",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_AboutSection_jsx.js"
-    ]
-  },
-  "pages\\index.tsx -> ../src/components/Banner": {
-    "id": "pages\\index.tsx -> ../src/components/Banner",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_Banner_jsx.js"
-    ]
-  },
-  "pages\\index.tsx -> ../src/components/Contact": {
-    "id": "pages\\index.tsx -> ../src/components/Contact",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_Contact_jsx.js"
-    ]
-  },
   "pages\\index.tsx -> ../src/components/FluidWebGLBackground": {
     "id": "pages\\index.tsx -> ../src/components/FluidWebGLBackground",
     "files": [
       "static/chunks/_pages-dir-browser_src_components_FluidWebGLBackground_tsx.js"
     ]
   },
-  "pages\\index.tsx -> ../src/components/Footer": {
-    "id": "pages\\index.tsx -> ../src/components/Footer",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_Footer_jsx.js"
-    ]
-  },
   "pages\\index.tsx -> ../src/components/GalaxyBackground": {
     "id": "pages\\index.tsx -> ../src/components/GalaxyBackground",
     "files": [
       "static/chunks/_pages-dir-browser_src_components_GalaxyBackground_jsx.js"
-    ]
-  },
-  "pages\\index.tsx -> ../src/components/NavBar": {
-    "id": "pages\\index.tsx -> ../src/components/NavBar",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_NavBar_jsx.js"
-    ]
-  },
-  "pages\\index.tsx -> ../src/components/Projects": {
-    "id": "pages\\index.tsx -> ../src/components/Projects",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_Projects_jsx.js"
-    ]
-  },
-  "pages\\index.tsx -> ../src/components/Skills": {
-    "id": "pages\\index.tsx -> ../src/components/Skills",
-    "files": [
-      "static/chunks/_pages-dir-browser_src_components_Skills_jsx.js"
     ]
   }
 }
