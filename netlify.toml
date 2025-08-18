@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
+  command   = "npm run build"
+  publish   = ".next"                 # Next.js build output
+  functions = ".netlify/functions"    # where the plugin will drop your SSR lambdas
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

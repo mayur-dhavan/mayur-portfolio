@@ -33,3 +33,5 @@ yarn-error.log*
 /.firebaserc
 /firebase.json
 /src/firebase.js
+# Local Netlify folder
+.netlify
