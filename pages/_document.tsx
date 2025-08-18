@@ -32,10 +32,12 @@ export default function Document() {
   <meta name="keywords" content="web developer, portfolio, React, Next.js, JavaScript, UI/UX, frontend, backend, full stack, hire web developer, modern websites, Mayur Dhavan" />
         
         {/* Add any additional head elements here */}
+    
       </Head>
       <body>
         <Main />
         <NextScript />
+        {/* Build with love and caare */}
       </body>
     </Html>
   )
