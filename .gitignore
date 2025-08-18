@@ -27,6 +27,7 @@ yarn-error.log*
 /.firebase
 /.github
 /.vscode
+/.next
 
 #firebase
 /.firebaserc

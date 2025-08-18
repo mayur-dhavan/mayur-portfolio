@@ -26,6 +26,10 @@ export default function Document() {
           type="font/ttf"
           crossOrigin="anonymous"
         />
+  {/* SEO Meta Tags */}
+  <title>Mayur Dhavan | Web Developer Portfolio & Modern Web Projects</title>
+  <meta name="description" content="Showcasing Mayur Dhavan’s skills as a web developer. Explore React, Next.js, UI/UX projects, and hire for modern website solutions." />
+  <meta name="keywords" content="web developer, portfolio, React, Next.js, JavaScript, UI/UX, frontend, backend, full stack, hire web developer, modern websites, Mayur Dhavan" />
         
         {/* Add any additional head elements here */}
       </Head>

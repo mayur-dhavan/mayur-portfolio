@@ -18,6 +18,16 @@ export const Projects = () => {
       status: "Live"
     },
     {
+      title: "StarkAI Labs",
+      description: "Website about AI agents and second brain",
+      category: "Web Application",
+      technologies: ["AI Agents", "JavaScript", "Next.js", "Node.js"],
+      details: "This website is all about AI agents and work around second brain.",
+      url: "http://starkailabs.tech",
+      github: null,
+      status: "Live"
+    },
+    {
       title: "LiveinDapoli.com",
       description: "Real estate & tourism portal",
       category: "Lead Generation Portal",
@@ -70,7 +80,7 @@ export const Projects = () => {
   ];
 
   const getStatusColor = (status) => {
-    switch(status) {
+    switch (status) {
       case 'Live': return 'success';
       case 'Work in Progress': return 'warning';
       case 'Completed': return 'info';
@@ -85,103 +95,103 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h2 className="text-center mb-4">Featured Projects</h2>
-                <p className="text-center mb-5">
-                  Building clean code, thoughtful design, and real-world solutions one project at a time.
-                </p>
-                <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                  <Row>
-                    {projects.map((project, index) => (
-                      <Col key={index} lg={4} md={6} className="mb-4">
-                        <Card className="h-100 shadow-lg project-card" style={{ 
-                          transition: 'all 0.3s ease',
-                          border: 'none',
-                          borderRadius: '15px'
-                        }}>
-                          <Card.Body className="d-flex flex-column">
-                            <div className="d-flex justify-content-between align-items-center mb-3">
-                              <span className={`badge bg-${getStatusColor(project.status)} px-3 py-2`}>
-                                {project.status}
-                              </span>
-                              <div>
-                                {project.url && (
-                                  <Button 
-                                    variant="outline-primary" 
-                                    size="sm" 
-                                    href={project.url} 
-                                    target="_blank"
-                                    className="me-2"
-                                  >
-                                    <BoxArrowUpRight size={14} />
-                                  </Button>
-                                )}
-                                {project.github && (
-                                  <Button 
-                                    variant="outline-dark" 
-                                    size="sm" 
-                                    href={project.github} 
-                                    target="_blank"
-                                  >
-                                    <Github size={14} />
-                                  </Button>
-                                )}
-                              </div>
-                            </div>
-                            
-                            <div className="mb-3">
-                              <Code size={24} className="text-primary mb-2" />
-                              <Card.Title className="h5 text-dark">{project.title}</Card.Title>
-                              <Card.Subtitle className="text-muted mb-2">{project.category}</Card.Subtitle>
-                              <Card.Text className="text-secondary">{project.description}</Card.Text>
-                            </div>
-
-                            <div className="mt-auto">
-                              <div className="mb-3">
-                                <small className="text-muted d-block mb-2">Technologies:</small>
-                                <div className="d-flex flex-wrap gap-1">
-                                  {project.technologies.map((tech, techIndex) => (
-                                    <span 
-                                      key={techIndex} 
-                                      className="badge bg-light text-dark border"
-                                      style={{ fontSize: '0.75rem' }}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h2 className="text-center mb-4">Featured Projects</h2>
+                  <p className="text-center mb-5">
+                    Building clean code, thoughtful design, and real-world solutions one project at a time.
+                  </p>
+                  <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <Row>
+                      {projects.map((project, index) => (
+                        <Col key={index} lg={4} md={6} className="mb-4">
+                          <Card className="h-100 shadow-lg project-card" style={{
+                            transition: 'all 0.3s ease',
+                            border: 'none',
+                            borderRadius: '15px'
+                          }}>
+                            <Card.Body className="d-flex flex-column">
+                              <div className="d-flex justify-content-between align-items-center mb-3">
+                                <span className={`badge bg-${getStatusColor(project.status)} px-3 py-2`}>
+                                  {project.status}
+                                </span>
+                                <div>
+                                  {project.url && (
+                                    <Button
+                                      variant="outline-primary"
+                                      size="sm"
+                                      href={project.url}
+                                      target="_blank"
+                                      className="me-2"
                                     >
-                                      {tech}
-                                    </span>
-                                  ))}
+                                      <BoxArrowUpRight size={14} />
+                                    </Button>
+                                  )}
+                                  {project.github && (
+                                    <Button
+                                      variant="outline-dark"
+                                      size="sm"
+                                      href={project.github}
+                                      target="_blank"
+                                    >
+                                      <Github size={14} />
+                                    </Button>
+                                  )}
                                 </div>
                               </div>
-                              
-                              <Card.Text className="text-muted small">
-                                {project.details}
-                              </Card.Text>
-                            </div>
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    ))}
-                  </Row>
-                </div>
-                
-                <div className="text-center mt-5">
-                  <p className="text-muted mb-3">Want to see more of my work?</p>
-                  <Button 
-                    variant="outline-primary" 
-                    size="lg" 
-                    href="https://github.com/mayur-dhavan" 
-                    target="_blank"
-                    className="px-4"
-                  >
-                    <Github className="me-2" />
-                    View More on GitHub
-                  </Button>
-                </div>
-              </div>}
+
+                              <div className="mb-3">
+                                <Code size={24} className="text-primary mb-2" />
+                                <Card.Title className="h5 text-dark">{project.title}</Card.Title>
+                                <Card.Subtitle className="text-muted mb-2">{project.category}</Card.Subtitle>
+                                <Card.Text className="text-secondary">{project.description}</Card.Text>
+                              </div>
+
+                              <div className="mt-auto">
+                                <div className="mb-3">
+                                  <small className="text-muted d-block mb-2">Technologies:</small>
+                                  <div className="d-flex flex-wrap gap-1">
+                                    {project.technologies.map((tech, techIndex) => (
+                                      <span
+                                        key={techIndex}
+                                        className="badge bg-light text-dark border"
+                                        style={{ fontSize: '0.75rem' }}
+                                      >
+                                        {tech}
+                                      </span>
+                                    ))}
+                                  </div>
+                                </div>
+
+                                <Card.Text className="text-muted small">
+                                  {project.details}
+                                </Card.Text>
+                              </div>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      ))}
+                    </Row>
+                  </div>
+
+                  <div className="text-center mt-5">
+                    <p className="text-muted mb-3">Want to see more of my work?</p>
+                    <Button
+                      variant="outline-primary"
+                      size="lg"
+                      href="https://github.com/mayur-dhavan"
+                      target="_blank"
+                      className="px-4"
+                    >
+                      <Github className="me-2" />
+                      View More on GitHub
+                    </Button>
+                  </div>
+                </div>}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background"/>
+      <img className="background-image-right" src={colorSharp2} alt="Background" />
     </section>
   )
 }
