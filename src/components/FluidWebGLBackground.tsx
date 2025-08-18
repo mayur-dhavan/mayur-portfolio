@@ -58,7 +58,7 @@ const FluidWebGLBackground: React.FC = () => {
       const internalFormat = isWebGL2 ? gl.RGBA16F : gl.RGBA;
       const internalFormatRG = isWebGL2 ? gl.RG16F : gl.RGBA;
       const formatRG = isWebGL2 ? gl.RG : gl.RGBA;
-      const texType = isWebGL2 ? gl.HALF_FLOAT : halfFloat?.HALF_FLOAT_OES;
+      const texType = isWebGL2 ? gl.HALF_FLOAT : (halfFloat?.HALF_FLOAT_OES ?? gl.UNSIGNED_BYTE);
 
       return {
         gl,
@@ -444,7 +444,7 @@ const FluidWebGLBackground: React.FC = () => {
       const iFormat = ext.internalFormat;
       const iFormatRG = ext.internalFormatRG;
       const formatRG = ext.formatRG;
-      const texType = ext.texType;
+      const texType = ext.texType ?? gl.UNSIGNED_BYTE; // Fallback to UNSIGNED_BYTE if undefined
 
       density = createDoubleFBO(0, textureWidth, textureHeight, iFormat, gl.RGBA, texType, support_linear_float ? gl.LINEAR : gl.NEAREST);
       velocity = createDoubleFBO(2, textureWidth, textureHeight, iFormatRG, formatRG, texType, support_linear_float ? gl.LINEAR : gl.NEAREST);
