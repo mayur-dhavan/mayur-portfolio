@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <div className="app-content">
         <NavBar />
         <Banner />
-        <Skills />
+        {/* <Skills /> */}
         <AboutSection />
         <Projects />
         <Contact />
