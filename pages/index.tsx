@@ -11,14 +11,14 @@ const Contact = dynamic(() => import('../src/components/Contact').then(mod => ({
 const Footer = dynamic(() => import('../src/components/Footer').then(mod => ({ default: mod.Footer })))
 
 // Client-side only (for WebGL/Canvas components that need browser APIs)
-const FluidWebGLBackground = dynamic(() => import('../src/components/FluidWebGLBackground'), { ssr: false })
-const GalaxyBackground = dynamic(() => import('../src/components/GalaxyBackground').then(mod => ({ default: mod.default })), { ssr: false })
+// const FluidWebGLBackground = dynamic(() => import('../src/components/FluidWebGLBackground'), { ssr: false })
+// const GalaxyBackground = dynamic(() => import('../src/components/GalaxyBackground').then(mod => ({ default: mod.default })), { ssr: false })
 
 const Home: NextPage = () => {
   return (
     <div className="App">
-      <GalaxyBackground />
-      <FluidWebGLBackground />
+      {/* <GalaxyBackground />
+      <FluidWebGLBackground /> */}
       <div className="app-content">
         <NavBar />
         <Banner />
