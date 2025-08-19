@@ -8,6 +8,16 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
   const projects = [
     {
+      title: "Las Vegas Hotels on Strip",
+      description: "WordPress blog covering hotels, nightlife, shows, and more",
+      category: "Content/Blog",
+      technologies: ["WordPress", "PHP", "MySQL", "Custom Theme", "SEO"],
+      details: "Comprehensive content site built on WordPress for planning stays and activities on the Las Vegas Strip, including hotels, restaurants, nightlife, attractions, and itineraries.",
+      url: "http://lasvegashotelsonstrip.com/",
+      github: null,
+      status: "Live"
+    },
+    {
       title: "DapaChecker.ai",
       description: "Domain authority checker for SEOs",
       category: "SaaS Tool",
@@ -31,7 +41,7 @@ export const Projects = () => {
       title: "LiveinDapoli.com",
       description: "Real estate & tourism portal",
       category: "Lead Generation Portal",
-      technologies: ["WordPress", "PHP", "MySQL", "JavaScript"],
+      technologies: ["React", "Vite","JavaScript","Node.js","TailwindCSS","Bootstrap"],
       details: "A comprehensive real estate and tourism portal for Maharashtra with lead generation functionality, property listings, and tourism information.",
       url: "https://liveindapoli.com",
       github: null,
@@ -44,7 +54,7 @@ export const Projects = () => {
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       details: "A modern eCommerce platform for eyewear with advanced product filtering, cart management, and secure payment integration.",
       url: null,
-      github: "https://github.com/mayur-dhavan/lensh ub-eyewear",
+      github: "https://github.com/mayur-dhavan/lensora-vision-hub.git",
       status: "Work in Progress"
     },
     {
@@ -71,7 +81,7 @@ export const Projects = () => {
       title: "WordPress Custom Solutions",
       description: "Bespoke WordPress development",
       category: "CMS Development",
-      technologies: ["WordPress", "PHP", "MySQL", "JavaScript"],
+      technologies: ["WordPress", "PHP", "MySQL", "JavaScript","Themes","Plugins"],
       details: "Custom WordPress themes and plugins development with focus on performance, SEO optimization, and user experience.",
       url: null,
       github: null,
@@ -104,24 +114,19 @@ export const Projects = () => {
                     <Row>
                       {projects.map((project, index) => (
                         <Col key={index} lg={4} md={6} className="mb-4">
-                          <Card className="h-100 shadow-lg project-card" style={{
-                            transition: 'all 0.3s ease',
-                            border: 'none',
-                            borderRadius: '15px'
-                          }}>
+                          <Card className="h-100 project-card">
+                            <div className="project-card-accent" />
                             <Card.Body className="d-flex flex-column">
-                              <div className="d-flex justify-content-between align-items-center mb-3">
-                                <span className={`badge bg-${getStatusColor(project.status)} px-3 py-2`}>
-                                  {project.status}
-                                </span>
-                                <div>
+                              <div className="project-card-header mb-3">
+                                <span className={`project-status status-${getStatusColor(project.status)}`}>{project.status}</span>
+                                <div className="project-actions">
                                   {project.url && (
                                     <Button
                                       variant="outline-primary"
                                       size="sm"
                                       href={project.url}
                                       target="_blank"
-                                      className="me-2"
+                                      className="project-action me-2"
                                     >
                                       <BoxArrowUpRight size={14} />
                                     </Button>
@@ -132,6 +137,7 @@ export const Projects = () => {
                                       size="sm"
                                       href={project.github}
                                       target="_blank"
+                                      className="project-action"
                                     >
                                       <Github size={14} />
                                     </Button>
@@ -140,21 +146,20 @@ export const Projects = () => {
                               </div>
 
                               <div className="mb-3">
-                                <Code size={24} className="text-primary mb-2" />
-                                <Card.Title className="h5 text-dark">{project.title}</Card.Title>
+                                <Code size={24} className="project-icon" />
+                                <Card.Title className="h5 text-white mb-1">{project.title}</Card.Title>
                                 <Card.Subtitle className="text-muted mb-2">{project.category}</Card.Subtitle>
-                                <Card.Text className="text-secondary">{project.description}</Card.Text>
+                                <Card.Text className="text-gray-300">{project.description}</Card.Text>
                               </div>
 
                               <div className="mt-auto">
                                 <div className="mb-3">
-                                  <small className="text-muted d-block mb-2">Technologies:</small>
-                                  <div className="d-flex flex-wrap gap-1">
+                                  <small className="text-muted d-block mb-2">Technologies</small>
+                                  <div className="d-flex flex-wrap gap-2">
                                     {project.technologies.map((tech, techIndex) => (
                                       <span
                                         key={techIndex}
-                                        className="badge bg-light text-dark border"
-                                        style={{ fontSize: '0.75rem' }}
+                                        className="project-tech-chip"
                                       >
                                         {tech}
                                       </span>

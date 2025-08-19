@@ -3,6 +3,7 @@ import Head from 'next/head'
 import '../src/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css'
+import '../styles/tailwind.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

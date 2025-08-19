@@ -6,6 +6,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import resume from '../assets/MayurResumeNew.pdf'; 
 import ResumePreviewModal from './ResumePreviewModal';
+import AnimatedButton from './ui/AnimatedButton';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -54,22 +55,32 @@ export const Banner = () => {
   const handleCloseModal = () => setShowModal(false);
 
   return (
-    <section className="banner" id="home">
+    <section className="banner relative overflow-hidden" id="home">
+      {/* Removed gradient mesh overlay */}
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <button
+                  <AnimatedButton
+                    variant="glass"
+                    size="sm"
                     className="tagline"
-                    onClick={handleShowModal} 
+                    onClick={handleShowModal}
                   >
-                    Download My Resume
-                  </button>
-                  <h1>{`Hi! My Name Is Mayur Dhavan, I'm a`} <span className="txt-rotate" data-period="1000" data-rotate='[ "Web Developer", "Full Stack Engineer", "eCommerce Developer" ]'><span className="wrap">{text}</span></span></h1>
+                    View Resume
+                  </AnimatedButton>
+                  <h1>{`Hi! My Name Is Mayur Dhavan, I'm a`} <span className="txt-rotate" data-period="1000" data-rotate='[ "Web Developer", "Full Stack Engineer", "eCommerce Developer" ]'><span className="wrap text-gradient-secondary">{text}</span></span></h1>
                   <p>As a Web Developer and Full Stack Engineer, I specialize in building clean code, thoughtful design, and real-world solutions. With a passion for scalable SaaS and eCommerce applications, I leverage my expertise in modern technologies to create impactful and user-centric digital experiences. I am always learning and open to new challenges in the ever-evolving tech landscape.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <AnimatedButton
+                    variant="gradient"
+                    size="md"
+                    icon={ArrowRightCircle}
+                    onClick={() => console.log('connect')}
+                  >
+                    Let’s Connect
+                  </AnimatedButton>
                 </div>}
             </TrackVisibility>
           </Col>
@@ -77,7 +88,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img" />
+                  <img src={headerImg} alt="Header Img" className="rounded-3xl animate-float" />
                 </div>}
             </TrackVisibility>
           </Col>

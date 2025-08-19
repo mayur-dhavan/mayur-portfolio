@@ -23,18 +23,20 @@ export function AboutSection() {
     { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-    { name: "TailwindCSS", icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tailwindcss.svg" },
+    {name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"},
+    { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true, lightBg: true, noDim: true },
+    { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", noDim: true },
     { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+    { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true, lightBg: true, noDim: true },
     { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
     { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-    { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "Shopify", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" },
+    { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg", noDim: true },
+    { name: "Shopify", icon: "https://www.svgrepo.com/show/303503/shopify-logo.svg", noDim: true },
     { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-    { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", invert: true, lightBg: true, noDim: true  },
+    { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+    {name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"}
   ];
 
   const experience = [
@@ -132,11 +134,11 @@ export function AboutSection() {
                         {skills.map((skill, index) => (
                           <Col key={index} xs={4} sm={3} md={2} lg={1.5} className="mb-4">
                             <div className="skill-item text-center">
-                              <div className="skill-icon-wrapper">
+                              <div className={`skill-icon-wrapper ${skill.lightBg ? 'skill-icon-light-bg' : ''}`}>
                                 <img 
                                   src={skill.icon} 
                                   alt={skill.name} 
-                                  className="skill-icon"
+                                  className={`skill-icon ${skill.invert ? 'skill-icon-invert' : ''} ${skill.noDim ? 'skill-icon-no-dim' : ''}`}
                                 />
                               </div>
                               <p className="skill-name">{skill.name}</p>
