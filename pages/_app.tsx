@@ -13,10 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Mayur Dhavan - Full Stack Web Developer Portfolio" />
+        <meta name="description" content="Mayur Dhavan's portfolio showcasing expertise in web development, including projects, skills, and professional experience at Radon Media." />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <title>Mayur Dhavan - Full Stack Web Developer</title>
+        <title>Mayur Dhavan - Full Stack Web Developer Portfolio</title>
         
         {/* SEO Meta Tags */}
         <meta name="keywords" content="web developer, full stack developer, react developer, portfolio, mayur dhavan" />
