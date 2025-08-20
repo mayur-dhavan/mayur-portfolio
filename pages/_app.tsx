@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Mayur Dhavan - Full Stack Web Developer" />
         <meta property="og:description" content="Professional web developer specializing in React, Node.js, and modern web technologies" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mayur-portfolio.vercel.app" />
+        <meta property="og:url" content="https://mayurdhavan.tech" />
         <meta property="og:image" content="/main-logo.png" />
         
         {/* Twitter Card */}
