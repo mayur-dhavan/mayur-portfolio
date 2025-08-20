@@ -127,7 +127,7 @@ export function AboutSection() {
                   </div>
 
                   {/* Skills Section */}
-                  <div className="skills-section mt-5">
+                  <div className="skills-section mt-5" id="skills">
                     <h3 className="section-subtitle">Technical Skills</h3>
                     <div className="skills-container">
                       <Row className="justify-content-center">
@@ -150,7 +150,7 @@ export function AboutSection() {
                   </div>
 
                   {/* Experience Section */}
-                  <div className="experience-section mt-5">
+                  <div className="experience-section mt-5" id="experience">
                     <h3 className="section-subtitle">Professional Experience</h3>
                     <div className="experience-timeline">
                       {experience.map((exp, index) => (

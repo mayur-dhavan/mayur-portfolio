@@ -29,6 +29,7 @@ yarn-error.log*
 /.vscode
 /.next
 .next/
+.vercel/
 
 #firebase
 /.firebaserc
