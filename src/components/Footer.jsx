@@ -62,7 +62,7 @@ export const Footer = () => {
         <Row className="footer-bottom align-items-center mt-3 pt-3">
           <Col size={12} md={6} className="text-center text-md-start">
             <p className="m-0 footer-copy">&copy; 2025 Mayur Portfolio. All rights reserved.</p>
-            <p className="m-0 footer-made">Made with ❤ by Mayur D</p>
+            <p className="m-0 footer-made">Made with ❤ by Mayur D(test)</p>
           </Col>
           <Col size={12} md={6} className="text-center text-md-end">
             <div className="social-icon footer-social">
