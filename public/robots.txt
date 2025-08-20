@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mayur-dhavan.netlify.app/sitemap.xml
+Sitemap: https://mayurdhavan.tech/sitemap.xml

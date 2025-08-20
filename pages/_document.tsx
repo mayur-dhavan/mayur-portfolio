@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="google-site-verification" content="VHAZhone4QByDd9WcwAdyE1lORGFoaS0jj7uYVHW9ik" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://mayur-dhavan.netlify.app/" />
+        <link rel="canonical" href="https://mayurdhavan.tech/" />
         
         {/* Icons and Manifest */}
         <link rel="icon" href="/favicon-32x32.png" />
@@ -26,7 +26,7 @@ export default function Document() {
             "@context": "https://schema.org/",
             "@type": "Person",
             "name": "Mayur Dhavan",
-            "url": "https://mayur-dhavan.netlify.app/",
+            "url": "https://mayurdhavan.tech/",
             "image": "https://mayur-dhavan.web.app/static/media/MyIMG.8cef0c8b9c83a163c17e.jpg",
             "sameAs": [
               "https://www.instagram.com/mayur_dhavan_",
