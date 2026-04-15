@@ -44,11 +44,7 @@
     "lint": "next lint",
     "export": "next export"
   },
-  "eslintConfig": {
-    "extends": [
-      "next/core-web-vitals"
-    ]
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
